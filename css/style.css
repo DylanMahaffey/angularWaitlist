@@ -12,7 +12,13 @@ justify-content: space-between;
     height: 3vh;
     width: 100%;
 }
-<<<<<<< HEAD
+waitlist {
+    height: 70vh;
+    width: 20vw;
+    border: 1px solid black;
+    margin: 0;
+    overflow: auto;
+}
 /*modal stuff*/
 md-dialog.fullscreen-dialog {
     max-width: 80%;
@@ -59,16 +65,6 @@ md-dialog.fullscreen-dialog {
     text-decoration: none;
     cursor: pointer;
 }
-=======
-waitlist {
-    height: 70vh;
-    width: 20vw;
-    border: 1px solid black;
-    margin: 0;
-    overflow: auto;
-}
-
->>>>>>> 1c3951f8b465430dd9bddb39d2bc17abc0585b04
 /*test classes*/
 .test-box{
     height: 500px;
@@ -81,15 +77,6 @@ waitlist {
     background: black;
     margin: 0;
 }
-<<<<<<< HEAD
-.test-waitlist{
-    height: 70vh;
-    width: 20vw;
-    border: 1px solid black;
-}
-=======
-
->>>>>>> 1c3951f8b465430dd9bddb39d2bc17abc0585b04
 .test-buttons{
     height: 70vh;
     width: 5vw;
