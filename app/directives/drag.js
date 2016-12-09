@@ -17,13 +17,13 @@ directive('draggable', function($document) {
     element.on('mousedown', function(event) {
       // Prevent default dragging of selected content
       // console.log('mousedown scope.drag ='+ scope.drag);
-      // if (scope.drag) {
+//     if ($scope.drag) {
         event.preventDefault();
         startX = event.screenX - x;
         startY = event.screenY - y;
         $document.on('mousemove', mousemove);
         $document.on('mouseup', mouseup);
-    // }
+//     }
     });
 
     function mousemove(event) {
