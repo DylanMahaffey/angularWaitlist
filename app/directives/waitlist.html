@@ -1,3 +1,34 @@
-<div class="test-waitlist">
+
+<div ng-controller='waitlistController'>
+
+    <div class="wait-switch">
+        <p class="wait-button" ng-click='waitlist()'>waitlist</p>
+        <p class="wait-button" ng-click='reslist()'>reservations</p>
+    </div>
+
+    <div class="list-section">
+
+        <div id='{{party.WAITLISTSEQ}}' class='party' ng-repeat='party in listOfWaitlist' ng-show='wait' ng-click='seatParty(party.WAITLISTSEQ)'>
+            <h1 class="party-name">{{party.NAME}}</h1>
+            <span class="underline"></span>
+            <h3 class="party-size">party of: {{party.SEATS}}</h3>
+            <h3 class="party-section">section: {{party.SECTIONNAME}}</h3>
+        </div>
+
+        <div class="reservations" ng-repeat='array in arrays' ng-show='res' ng-click='seatParty()'>
+
+            <h1 class="res-date">{{array.date}}</h1>
+
+            <span class="res-border"></span>
+
+            <div class="res-info">
+                <h2 class="res-name">{{array.name}}</h2>
+                <h3 class="res-size">party of {{array.partySize}}</h3>
+                <h3 class="res-section">section: back alley</h3>
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
