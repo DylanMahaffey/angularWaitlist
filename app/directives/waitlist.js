@@ -7,3 +7,5 @@ app.directive('waitlist', function(){
         templateUrl: 'app/directives/waitlist.html'
     };
 });
+
+
