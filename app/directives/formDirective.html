@@ -1,0 +1,49 @@
+<div ng-app="test">
+  <div layout="column" layout-align="center center" layout-fill="layout-fill" ng-controller="groupController">
+    <md-button ng-click="showDialog($event)" class="md-primary md-raised">Show dialog</md-button>
+  </div>
+  <script type="text/ng-template" id="dialogContent.tmpl.html">
+    <md-dialog aria-label="Full Screen Dialog Test" class="fullscreen-dialog">
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <md-button ng-click="closeDialog()" class="md-icon-button">
+            <md-icon class="fa fa-times fa-2x"></md-icon>
+          </md-button>
+          <h2 flex="flex">Box Test</h2>
+        </div>
+      </md-toolbar>
+      <md-dialog-content>
+        <form name="userForm"></form>
+        <div layout="layout" layout-sm="column">
+          <md-input-container style="width:80%">
+            <label>Company (Disabled)</label>
+            <input ng-model="user.company" disabled="disabled"/>
+          </md-input-container>
+          <md-input-container flex="flex">
+            <label>Submission Date</label>
+            <input type="date" ng-model="user.date"/>
+          </md-input-container>
+        </div>
+        <div layout="layout" layout-sm="column"></div>
+        <md-input-container flex="flex">
+          <label>Party Name</label>
+          <input ng-model="user.name"/>
+        </md-input-container>
+        <md-input-container flex="flex">
+          <label>Party Size</label>
+          <input ng-model="user.size"/>
+        </md-input-container>
+        <md-input-container flex="flex">
+          <label>Party Contect Number</label>
+          <input ng-model="user.number"/>
+        </md-input-container>
+        <div layout="layout" layout-sm="column">
+          <md-input-container flex="flex">
+            <label>Section</label>
+            <input ng-model="user.section"/>
+        </md-input-container>
+        </div>
+      </md-dialog-content>
+    </md-dialog>
+  </script>
+</div>
