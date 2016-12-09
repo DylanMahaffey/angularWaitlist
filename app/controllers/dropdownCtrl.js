@@ -99,4 +99,11 @@ app.controller('dropdownCtrl',
           });
       };
 
+        $scope.tableInfo = function (id) {
+          for (var t = 0; t < $scope.listOfTables.length; t++) {
+             if ( $scope.listOfTables[t].ID == id ) {
+               alert('Table Id is ' + $scope.listOfTables[t].ID);
+             }}
+        }
+
 });
