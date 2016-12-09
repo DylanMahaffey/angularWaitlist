@@ -74,19 +74,29 @@ app.controller('dropdownCtrl',
         for (var t = 0; t < $scope.listOfTables.length; t++) {
            if ( $scope.listOfTables[t].ID == tableArr[i].id ) {
              console.log('Table from list of tables ' +  JSON.stringify($scope.listOfTables[t]));
-              console.log('Table TOP ' +  $scope.listOfTables[t].POSTOP + ' LEFT ' +  $scope.listOfTables[t].POSLEFT + ' Moved to  TOP ' + tableArr[i].style.top + ' Moved to  LEFT ' + tableArr[i].style.left);
+             console.log('Table TOP ' +  $scope.listOfTables[t].POSTOP + ' LEFT ' +  $scope.listOfTables[t].POSLEFT + ' Moved to  TOP ' + tableArr[i].style.top + ' Moved to  LEFT ' + tableArr[i].style.left);
 
-
-
-              // $scope.listOfTables[t].POSTOP =    tableArr[i].style.top;
-              // $scope.listOfTables[t].POSLEFT =  tableArr[i].style.left;
+             $scope.listOfTables[t].POSTOP = tableArr[i].style.top.replace('px','');
+             $scope.listOfTables[t].POSLEFT = tableArr[i].style.left.replace('px','');
+             $scope.updateTable( $scope.listOfTables[t]);
           }
         }
         console.log('tableArr ' + i + ' id=' + tableArr[i].id);
-
       }
-
-
     };
+
+
+    $scope.updateTable = function (tableObject) {
+      console.log('Save tables clicked');
+      $http.post('http://67.182.6.162/YBIYNI/GeekWise.dll/PostTable',tableObject,config)
+          .success(function (data) {
+              console.log('Post Table data ' + JSON.stringify(data));
+
+
+          })
+          .error(function (data, status, headers, config) {
+              $scope.errorMessage = "Couldn't Post the Table ' + tableObj.ID + ', error # " + status;
+          });
+      };
 
 });
