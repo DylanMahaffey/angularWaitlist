@@ -12,13 +12,7 @@ justify-content: space-between;
     height: 3vh;
     width: 100%;
 }
-waitlist {
-    height: 70vh;
-    width: 20vw;
-    border: 1px solid black;
-    margin: 0;
-    overflow: auto;
-}
+
 /*modal stuff*/
 md-dialog.fullscreen-dialog {
     max-width: 80%;
@@ -65,23 +59,7 @@ md-dialog.fullscreen-dialog {
     text-decoration: none;
     cursor: pointer;
 }
-/*test classes*/
-.test-box{
-    height: 500px;
-    width: 500px;
-    background: black;
-}
-.table-test {
-    height: 70vh;
-    width: 65vw;
-    background: black;
-    margin: 0;
-}
-.test-buttons{
-    height: 70vh;
-    width: 5vw;
-    border: 1px solid black;
-}
+/*TEST CLASSES*/
 .test-tableButtons{
     height: 100%;
     width: 100%;
@@ -113,7 +91,32 @@ nav ul li:hover {
     background: rgba(0, 0, 0, 0.5);
 }
 
+/*MAIN TABLE SECTION*/
+.table-section{
+    display: flex;
+    width: 75vw;
+    height: 75vh;
+}
+.side-buttons{
+    height: 70vh;
+    width: 4vw;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.dining-room{
+    margin-left: 2vw;
+}
+
 /*WAITLIST SECTION*/
+waitlist {
+    height: 76vh;
+    width: 20vw;
+    border: 1px solid black;
+    margin: 0;
+    overflow: auto;
+}
 .wait-switch{
     display: flex;
     height: 6vh;
@@ -133,7 +136,7 @@ nav ul li:hover {
 }
 .list-section{
     overflow-y: scroll;
-    height: 64vh;
+    height: 70vh;
 }
 /*WAITLIST*/
 .party{

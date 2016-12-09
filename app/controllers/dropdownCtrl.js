@@ -106,4 +106,10 @@ app.controller('dropdownCtrl',
              }}
         }
 
+        $scope.hey = false;
+
+        $scope.show = function (){
+            $scope.hey = true;
+        }
+
 });
