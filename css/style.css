@@ -1,4 +1,7 @@
+/*FONTS*/
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
+/*MAIN SECTIONS*/
 #main-content{
 display: flex;
 justify-content: space-between;
@@ -9,19 +12,27 @@ justify-content: space-between;
     height: 3vh;
     width: 100%;
 }
+waitlist {
+    height: 70vh;
+    width: 20vw;
+    border: 1px solid black;
+    margin: 0;
+    overflow: auto;
+}
+
 /*test classes*/
+.test-box{
+    height: 500px;
+    width: 500px;
+    background: black;
+}
 .table-test {
     height: 70vh;
     width: 65vw;
     background: black;
     margin: 0;
 }
-.test-waitlist {
-    height: 70vh;
-    width: 20vw;
-    background: red;
-    margin: 0;
-}
+
 .test-buttons{
     height: 70vh;
     width: 5vw;
@@ -58,7 +69,76 @@ nav ul li:hover {
     background: rgba(0, 0, 0, 0.5);
 }
 
-/*FOOTER*/
+/*WAITLIST SECTION*/
+.wait-switch{
+    display: flex;
+    height: 6vh;
+    border-bottom: 1px solid black;
+}
+.wait-button{
+    width: 50%;
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid black;
+    cursor: pointer;
+    padding: 5px 0;
+}
+.wait-button:hover{
+    background: rgba(0, 0, 0, 0.2);
+}
+.list-section{
+    overflow-y: scroll;
+    height: 64vh;
+}
+/*WAITLIST*/
+.party{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Playfair Display';
+}
+.party:hover{
+    background: rgba(0, 0, 0, 0.1);
+}
+.party-name{
+    font-size: 25px;
+}
+.underline{
+    border: 1px solid black;
+    width: 75%;
+}
+.party-size{
+    margin: 10px;
+}
+.party-section{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/*RESERVATIONS*/
+.reservations{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    width: 99%;
+}
+.reservations:hover{
+    background: rgba(0, 0, 0, 0.1);
+}
+.res-date{
+    font-size: 20px;
+    margin: 5px;
+    width: 40%;
+    border-right: 1px solid black;
+}
+.res-info{
+    width: 60%;
+    padding-left: 10px;
+}
+
+/*TABLE BUTTON SECTION*/
 .arrow-box{
     border: 1px solid black;
     border-top-right-radius: 10px;
