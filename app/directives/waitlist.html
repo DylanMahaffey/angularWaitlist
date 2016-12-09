@@ -14,16 +14,16 @@
             <h3 class="party-section">section: {{party.SECTIONNAME}}</h3>
         </div>
 
-        <div class="reservations" ng-repeat='array in arrays' ng-show='res' ng-click='seatParty()'>
+        <div class="reservations" ng-repeat='reserv in listOfReservations' ng-show='res' ng-click='seatParty()'>
 
-            <h1 class="res-date">{{array.date}}</h1>
+            <h1 class="res-date">{{reserv.RESDATE}}</h1>
 
             <span class="res-border"></span>
 
             <div class="res-info">
-                <h2 class="res-name">{{array.name}}</h2>
-                <h3 class="res-size">party of {{array.partySize}}</h3>
-                <h3 class="res-section">section: back alley</h3>
+                <h2 class="res-name">{{reserv.NAME}}</h2>
+                <h3 class="res-size">party of {{reserv.SEATS}}</h3>
+                <h3 class="res-section">section: {{reserv.SECTIONNAME}}</h3>
             </div>
 
         </div>
