@@ -1,8 +1,6 @@
 app.controller('waitlistController', function ($scope, $http) {
-    $scope.hey = 'hey there!';
 
-    $scope.wait = true;
-    $scope.res = false;
+    $scope.send = true;
 
     $scope.waitlist = function () {
         $scope.wait = true
@@ -18,20 +16,48 @@ app.controller('waitlistController', function ($scope, $http) {
 
         for(var i = 0; i<$scope.listOfWaitlist.length; i++){
             if ($scope.listOfWaitlist[i].WAITLISTSEQ == id) {
-                alert(JSON.stringify($scope.listOfWaitlist[i].NAME +'                       '+ id));
+                alert(JSON.stringify($scope.listOfWaitlist[i].NAME +'  '+ id));
 
             };
         };
+
     };
-    $scope.partyInfo = function (id) {
+
+    $scope.contact = function (id) {
 
         for(var i = 0; i<$scope.listOfWaitlist.length; i++){
             if ($scope.listOfWaitlist[i].WAITLISTSEQ == id) {
-                alert(JSON.stringify($scope.listOfWaitlist[i]));
-
-            };
+                $scope.partyName  = JSON.stringify($scope.listOfWaitlist[i].NAME);
+                // $scope.sent = true;
+                // $scope.send = false;
+            }
         };
+
+        // document.getElementsByID(id).classList.remove('show');
+        // document.getElementsByID(id).classList.add('hide');
+
+
+        $scope.modal = true;
+        $scope.contactTest = true;
+
     };
+    $scope.closeContact = function () {
+        $scope.modal = false;
+        $scope.contactTest = false;
+    }
+
+    $scope.confirmRemove = function(){
+        $scope.modal = true;
+        $scope.removeConfirm = true;
+    }
+    $scope.removeParty = function() {
+        $scope.modal = false;
+        $scope.removeConfirm = false;
+    }
+    $scope.leaveParty = function() {
+        $scope.modal = false;
+        $scope.removeConfirm = false;
+    }
 
 
     var array = [

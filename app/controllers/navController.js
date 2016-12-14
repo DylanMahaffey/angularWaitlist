@@ -1,22 +1,23 @@
 app.controller('navController', function($scope) {
 
+    $scope.addWaitlist = function () {
+        console.log('in');
+        $scope.modal = true;
+        $scope.test = true;
+    }
+    $scope.closeWaitlist = function () {
+        console.log('out');
+        $scope.modal = false;
+        $scope.test = false;
+    }
 
-
-	// var modal = document.getElementById('myModal');	
-	// var span = document.getElementsByClassName("close");
-
-	// $scope.toggle = function(){
- //    	modal.style.display = "block";
-	// }
-
-	// span.onclick = function() {
-	//     modal.style.display = "none";
-	// }
-
-	// window.onclick = function(event) {
-	//     if (event.target == modal) {
-	//         modal.style.display = "none";
-	//     }
- //    }
+    $scope.show = function () {
+        $scope.modal = true;
+        $scope.hey = true;
+    };
+    $scope.hide = function () {
+        $scope.modal = false;
+        $scope.hey = false;
+    }
 
 });

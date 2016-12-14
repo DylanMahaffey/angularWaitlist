@@ -10,14 +10,15 @@
 
         <div id='{{party.WAITLISTSEQ}}' class='party' ng-repeat='party in listOfWaitlist' ng-show='wait'>
             <div class="waitlist-party-options">
-                <p ng-click='seatParty(party.WAITLISTSEQ)' >Seat Party</p><p ng-click='partyInfo(party.WAITLISTSEQ)'>Information</p>
+                <p ng-click='confirmRemove()' >Remove Party</p><p ng-click='contact(party.WAITLISTSEQ)' ng-show='send'>Contact</p><p ng-show='sent'>Message Sent</p>
             </div>
-            <div class="party-body">
+            <div class="party-body"  ng-click='seatParty(party.WAITLISTSEQ)' >
                 <h1 class="party-name">{{party.NAME}}</h1>
                 <span class="underline"></span>
                 <h3 class="party-size">party of: {{party.SEATS}}</h3>
                 <h3 class="party-section">section: {{party.SECTIONNAME}}</h3>
             </div>
+
         </div>
 
         <div id='{{reserv.WAITLISTSEQ}}' class="reservations" ng-repeat='reserv in listOfReservations' ng-show='res' ng-click='partyInfo(reserv.WAITLISTSEQ)'>
@@ -40,6 +41,20 @@
 
     </div>
 
+    </div>
+
+    <div class="modal-section" ng-show='modal'>
+
+        <div class='contact' ng-show='contactTest'  ng-click='closeContact()'>
+            <p>normally this button would send a text to {{partyName}} but as to avoid paying for a service while this app is not in use it will just display this message :)</p>
+        </div>
+
+        <div class="remove-party" ng-show='removeConfirm'>
+            <p>Would you like to remove this party?</p>
+            <br>
+            <button ng-click='removeParty()'>yes</button>
+            <button ng-click='leaveParty()'>no</button>
+        </div>
     </div>
 
 </div>
