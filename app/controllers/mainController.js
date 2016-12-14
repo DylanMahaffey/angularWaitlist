@@ -1,6 +1,8 @@
 app.controller('mainController', function($scope) {
     $scope.hello = 'Hello World!';
 
+    $scope.modalBackground = modalBackground;
+
     $scope.drag = true;
 
     $scope.dragOn = function () {

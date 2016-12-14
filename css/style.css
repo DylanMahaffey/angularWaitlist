@@ -1,6 +1,18 @@
 /*FONTS*/
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
+.test-window {
+    height: 500px;
+    width: 500px;
+    background: yellow;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+}
+
 /*MAIN SECTIONS*/
 #main-content{
 display: flex;
@@ -11,6 +23,17 @@ justify-content: space-between;
     bottom: 0px;
     height: 3vh;
     width: 100%;
+}
+.modal-section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*modal stuff*/
@@ -59,14 +82,6 @@ md-dialog.fullscreen-dialog {
     text-decoration: none;
     cursor: pointer;
 }
-/*TEST CLASSES*/
-.test-tableButtons{
-    height: 100%;
-    width: 100%;
-    border: 2px solid black;
-    margin: 0;
-    padding: 0;
-}
 
 /* NAVIGATION BARS */
 nav {
@@ -86,9 +101,14 @@ nav ul li {
     list-style-type: none;
     padding: 3px 20px;
     border-left: 1px solid black;
+    cursor: pointer;
 }
 nav ul li:hover {
     background: rgba(0, 0, 0, 0.5);
+}
+.markham {
+    display: flex;
+    flex-direction: column;
 }
 
 /*MAIN TABLE SECTION*/
@@ -101,9 +121,14 @@ nav ul li:hover {
     height: 70vh;
     width: 4vw;
     border: 1px solid black;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+.table-buttons{
+    height: 14%;
 }
 .dining-room{
     margin-left: 2vw;
@@ -111,7 +136,7 @@ nav ul li:hover {
 
 /*WAITLIST SECTION*/
 waitlist {
-    height: 76vh;
+    height: 76.5vh;
     width: 20vw;
     border: 1px solid black;
     margin: 0;
@@ -139,8 +164,26 @@ waitlist {
     height: 70vh;
 }
 /*WAITLIST*/
+.waitlist-party-options {
+    display: flex;
+    justify-content: space-around;
+}
+.waitlist-party-options p {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 5px 0;
+    padding: 0;
+    cursor: pointer;
+    border-right: .5px solid black;
+}
+.waitlist-party-options p:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
 .party{
     border: 1px solid black;
+}
+.party-body{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -167,9 +210,11 @@ waitlist {
 /*RESERVATIONS*/
 .reservations{
     border: 1px solid black;
+    width: 99%;
+}
+.res-body{
     display: flex;
     align-items: center;
-    width: 99%;
 }
 .reservations:hover{
     background: rgba(0, 0, 0, 0.1);
@@ -210,4 +255,23 @@ waitlist {
 }
 #bottom-content:hover {
     height: 13vh;
+}
+.create-table{
+    height: 100%;
+    width: 100%;
+    border: 2px solid black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+.create-table-btn {
+    height: 100%;
+    width: 100px;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

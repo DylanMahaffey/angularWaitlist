@@ -8,16 +8,26 @@
 
     <div class="list-section">
 
-        <div id='{{party.WAITLISTSEQ}}' class='party' ng-repeat='party in listOfWaitlist' ng-show='wait' ng-click='seatParty(party.WAITLISTSEQ)'>
-            <h1 class="party-name">{{party.NAME}}</h1>
-            <span class="underline"></span>
-            <h3 class="party-size">party of: {{party.SEATS}}</h3>
-            <h3 class="party-section">section: {{party.SECTIONNAME}}</h3>
+        <div id='{{party.WAITLISTSEQ}}' class='party' ng-repeat='party in listOfWaitlist' ng-show='wait'>
+            <div class="waitlist-party-options">
+                <p ng-click='seatParty(party.WAITLISTSEQ)' >Seat Party</p><p ng-click='partyInfo(party.WAITLISTSEQ)'>Information</p>
+            </div>
+            <div class="party-body">
+                <h1 class="party-name">{{party.NAME}}</h1>
+                <span class="underline"></span>
+                <h3 class="party-size">party of: {{party.SEATS}}</h3>
+                <h3 class="party-section">section: {{party.SECTIONNAME}}</h3>
+            </div>
         </div>
 
-        <div class="reservations" ng-repeat='reserv in listOfReservations' ng-show='res' ng-click='seatParty()'>
+        <div id='{{reserv.WAITLISTSEQ}}' class="reservations" ng-repeat='reserv in listOfReservations' ng-show='res' ng-click='partyInfo(reserv.WAITLISTSEQ)'>
 
-            <h1 class="res-date">{{reserv.RESDATE}}</h1>
+        <div class="waitlist-party-options">
+            <p ng-click='seatParty(reserv.WAITLISTSEQ)' >Seat Party</p><p ng-click='partyInfo(reserv.WAITLISTSEQ)'>Information</p>
+        </div>
+
+        <div class="res-body">
+            <h1 class="res-date">{{reserv.RESDATE}}{{reserv.RESTIME}}</h1>
 
             <span class="res-border"></span>
 
@@ -26,8 +36,9 @@
                 <h3 class="res-size">party of {{reserv.SEATS}}</h3>
                 <h3 class="res-section">section: {{reserv.SECTIONNAME}}</h3>
             </div>
-
         </div>
+
+    </div>
 
     </div>
 

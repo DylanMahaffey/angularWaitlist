@@ -12,11 +12,22 @@ app.controller('waitlistController', function ($scope, $http) {
         $scope.wait = false;
         $scope.res = true;
     };
+
+
     $scope.seatParty = function (id) {
 
         for(var i = 0; i<$scope.listOfWaitlist.length; i++){
             if ($scope.listOfWaitlist[i].WAITLISTSEQ == id) {
                 alert(JSON.stringify($scope.listOfWaitlist[i].NAME +'                       '+ id));
+
+            };
+        };
+    };
+    $scope.partyInfo = function (id) {
+
+        for(var i = 0; i<$scope.listOfWaitlist.length; i++){
+            if ($scope.listOfWaitlist[i].WAITLISTSEQ == id) {
+                alert(JSON.stringify($scope.listOfWaitlist[i]));
 
             };
         };

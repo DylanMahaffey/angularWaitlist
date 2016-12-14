@@ -1,9 +1,27 @@
-<nav ng-controller="navController">
-    <h4>angularWaitlist</h4>
+<div ng-controller='modalController'>
+    <nav ng-controller="navController">
+        <h4>angularWaitlist</h4>
 
-    <ul>
-        <li ng-click="toggle();" >stuff</li>
-        <li>things</li>
-        <li>junk</li>
-    </ul>
-</nav>
+        <ul>
+            <li ng-click="addWaitlist()" >Add to Waitlist</li>
+            <li>Add a Reservation</li>
+            <li ng-click='show()'>Markham on demand</li>
+        </ul>
+    </nav>
+
+<!-- MODAL SECTION -->
+
+    <div class="modal-section" ng-show='modal'>
+
+        <div class="test-window" ng-show='test'>
+            <h1>hello world!!!</h1>
+            <button ng-click='closeWaitlist()'>close</button>
+        </div>
+
+        <div ng-show='hey' class="markham">
+            <img src="image/Untitled.png" alt="">
+            <button ng-click='hide()'>Enough Markham</button>
+        </div>
+
+    </div>
+</div>

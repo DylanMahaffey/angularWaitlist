@@ -3,13 +3,11 @@
   <div ng-controller='dropdownCtrl' class="table-section">
 
     <div class="side-buttons">
-        <button ng-click="dragOn()" >Run Free</button>
-        <button ng-click="dragOff()" >Lock Down</button>
-        <button ng-click="saveTables()" >Save ME</button>
-        <button ng-click="show()">Markham</button>
+        <button class='table-buttons' ng-click="dragOn()" >Run Free</button>
+        <button class='table-buttons' ng-click="dragOff()" >Lock Down</button>
+        <button class='table-buttons' ng-click="saveTables()" >Save ME</button>
     </div>
 
-    <side-buttons ng-show='hey'></side-buttons>
 
     <div class="dining-room">
         <span>Please select a section:</span>
