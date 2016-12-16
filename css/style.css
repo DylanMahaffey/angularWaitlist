@@ -316,3 +316,6 @@ waitlist {
     align-items: center;
     cursor: pointer;
 }
+.create-table-btn img {
+    height: 90%
+}
