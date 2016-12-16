@@ -28,8 +28,8 @@ app.controller('waitlistController', function ($scope, $http) {
         for(var i = 0; i<$scope.listOfWaitlist.length; i++){
             if ($scope.listOfWaitlist[i].WAITLISTSEQ == id) {
                 $scope.partyName  = JSON.stringify($scope.listOfWaitlist[i].NAME);
-                // $scope.sent = true;
-                // $scope.send = false;
+                $scope.sent = true;
+                $scope.send = false;
             }
         };
 

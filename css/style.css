@@ -18,6 +18,9 @@
 .hide {
     display: none;
 }
+.clicked:clicked {
+    padding-left: 5px;
+}
 
 
 /*MAIN SECTIONS*/
@@ -27,6 +30,7 @@ html {
    -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
   -webkit-user-select: none; /* Chrome, Safari, and Opera */
   -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+  cursor: cell;
 }
 body {
     margin: 0;
